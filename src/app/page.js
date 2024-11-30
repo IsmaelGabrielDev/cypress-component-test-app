@@ -1,10 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function Home({ name = "EBAC" }) {	
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h1>
+          Olá, <span id="name">{name}</span>!
+          </h1>
         <Image
           className={styles.logo}
           src="/next.svg"
